@@ -1,10 +1,13 @@
 
 alert("Abrir la consola o presione F12")
 
-let num = Number(prompt("Usuario ingrese un número para multriplicar"))
-for (let b= 1; b<= num; b++ ){
-    console.log(`Tabla del ${b}`);
-for (let i = 1; i<=10; i++) {
-    console.log(`${b} X ${i} = ${b*i}`);
+fin=0, precio=0;
+for (i = 1; i >= fin ; i++){
+    let num = Number(prompt("Usuario ingrese el precio de su medicamento:"));
+    precio = precio + num;
+    let n = Number(prompt("Desea continuar ingresando más precios: Si: 1 O No: 0"));
+    if(n == 1){i = 0 }
+    else{break;}
 }
-}
+console.log(`Su descuento es de: ${precio*0.10}`);
+console.log(`El total a pagar es de: ${precio}`);
