@@ -1,13 +1,19 @@
 
 alert("Abrir la consola o presione F12")
 
-fin=0, precio=0;
-for (i = 1; i >= fin ; i++){
-    let num = Number(prompt("Usuario ingrese el precio de su medicamento:"));
-    precio = precio + num;
-    let n = Number(prompt("Desea continuar ingresando más precios: Si: 1 O No: 0"));
-    if(n == 1){i = 0 }
-    else{break;}
+let pf, nota=0;
+
+for (i = 1; i <= 3; i++){
+
+    let num = Number(prompt(`Ingrese su nota del parcial ${i}`));
+    nota = nota + num;
 }
-console.log(`Su descuento es de: ${precio*0.10}`);
-console.log(`El total a pagar es de: ${precio}`);
+
+    pf=((nota/3)*.55);
+
+    let ef = (Number(prompt("Ingrese la nota de su examen final:"))*.3);
+
+    let tf = (Number(prompt("Ingrese la nota de su trabajo final:"))*.15);
+
+    alert (`Su promedio final es: ${pf+ef+tf}`);
+
